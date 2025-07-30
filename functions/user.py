@@ -28,25 +28,8 @@ async def user_create(email, password, name, surname, birthdate, phone_number = 
             "phone_number": phone_number,
             "city": city,
             "country": country
-        },
-        "orders": {
-            "cart": {
-                "id": []
-            },
-            "orders": {
-                "id": []
-            }
-        },
-        "others":{
-            "wishlist": {
-                "id": []
-            },
-            "recently_viewed": {
-                "id": [],
-                "category": []
-            }
         }
-    }     
+    }
     
     data = await send_data(collection, dict)
     return data
